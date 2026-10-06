@@ -1,0 +1,134 @@
+{
+  "dataset_metadata": {
+    "index_corpus_size": 2962,
+    "eval_query_count": 100
+  },
+  "tfidf_baseline": {
+    "indexing_time_sec": 1.94,
+    "precision_at_k": 0.71,
+    "hit_rate_at_k": 0.97,
+    "mrr_at_k": 0.8127,
+    "mean_top1_similarity": 0.3622,
+    "avg_query_latency_ms": 14.18,
+    "p95_query_latency_ms": 22.82,
+    "queries_evaluated": 100,
+    "top_k": 5,
+    "paraphrase_challenge": {
+      "paraphrase_top1_accuracy": 1.0,
+      "paraphrase_top_k_hit_rate": 1.0,
+      "case_details": [
+        {
+          "query": "The automated teller terminal retained my paper currency without crediting my balance",
+          "expected_category": "Retail Banking",
+          "top1_retrieved_category": "Retail Banking",
+          "top1_similarity": 0.1028,
+          "top1_match_snippet": "step complaint failure bank follow policy personally told teller supervisor depositing check failure follow bank policy ",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Third-party agency is threatening wage seizure for a disputed medical bill",
+          "expected_category": "Debt Collection",
+          "top1_retrieved_category": "Debt Collection",
+          "top1_similarity": 0.3186,
+          "top1_match_snippet": "sold third party collect charge account",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Inaccurate derogatory notation on my credit profile from an unknown bureau",
+          "expected_category": "Credit Reporting",
+          "top1_retrieved_category": "Credit Reporting",
+          "top1_similarity": 0.3998,
+          "top1_match_snippet": "made attempt fraud alert removed major credit bureau today fraud alert remains unable dispute unfamiliar item notation c",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Lender miscalculated annual percentage rate and property tax reserves",
+          "expected_category": "Mortgages & Loans",
+          "top1_retrieved_category": "Mortgages & Loans",
+          "top1_similarity": 0.2768,
+          "top1_match_snippet": "escrow payment accurate property tax lower lakeview conacted via phone email multiple time fixed issue claim working mon",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Merchant charged plastic line of credit twice for single transaction",
+          "expected_category": "Credit Card",
+          "top1_retrieved_category": "Credit Card",
+          "top1_similarity": 0.1842,
+          "top1_match_snippet": "credit card company closed merchant dispute explain much time elapse collect merchant purchase membership included point",
+          "success_top1": true,
+          "success_top_k": true
+        }
+      ]
+    }
+  },
+  "dense_sentence_transformers": {
+    "indexing_time_sec": 77.46,
+    "precision_at_k": 0.75,
+    "hit_rate_at_k": 0.94,
+    "mrr_at_k": 0.8342,
+    "mean_top1_similarity": 0.7681,
+    "avg_query_latency_ms": 30.89,
+    "p95_query_latency_ms": 61.7,
+    "queries_evaluated": 100,
+    "top_k": 5,
+    "paraphrase_challenge": {
+      "paraphrase_top1_accuracy": 0.8,
+      "paraphrase_top_k_hit_rate": 1.0,
+      "case_details": [
+        {
+          "query": "The automated teller terminal retained my paper currency without crediting my balance",
+          "expected_category": "Retail Banking",
+          "top1_retrieved_category": "Credit Reporting",
+          "top1_similarity": 0.4914,
+          "top1_match_snippet": "account inaccurate balance correct payment correct balance history different experian please delete per frca",
+          "success_top1": false,
+          "success_top_k": true
+        },
+        {
+          "query": "Third-party agency is threatening wage seizure for a disputed medical bill",
+          "expected_category": "Debt Collection",
+          "top1_retrieved_category": "Debt Collection",
+          "top1_similarity": 0.5141,
+          "top1_match_snippet": "original debtor care hospitalists nv gave treat information along cost date service radius global solution llc mn violat",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Inaccurate derogatory notation on my credit profile from an unknown bureau",
+          "expected_category": "Credit Reporting",
+          "top1_retrieved_category": "Credit Reporting",
+          "top1_similarity": 0.6149,
+          "top1_match_snippet": "credit bureau reporting incorrect information credit report",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Lender miscalculated annual percentage rate and property tax reserves",
+          "expected_category": "Mortgages & Loans",
+          "top1_retrieved_category": "Mortgages & Loans",
+          "top1_similarity": 0.4415,
+          "top1_match_snippet": "u bank locked mortgage rate percent took start application process never checked make sure type property refinancing say",
+          "success_top1": true,
+          "success_top_k": true
+        },
+        {
+          "query": "Merchant charged plastic line of credit twice for single transaction",
+          "expected_category": "Credit Card",
+          "top1_retrieved_category": "Credit Card",
+          "top1_similarity": 0.5408,
+          "top1_match_snippet": "home depot offered store credit card reward upon initial purchase within first day obtaining credit card purchased vario",
+          "success_top1": true,
+          "success_top_k": true
+        }
+      ]
+    }
+  },
+  "selection": {
+    "chosen_engine": "tfidf",
+    "rationale": "TF-IDF chosen: Provides superior execution speed with competitive category precision."
+  }
+}

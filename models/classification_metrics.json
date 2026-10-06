@@ -1,0 +1,260 @@
+{
+  "baseline": {
+    "accuracy": 0.8576,
+    "macro_f1": 0.8208,
+    "weighted_f1": 0.8561,
+    "macro_precision": 0.8307,
+    "macro_recall": 0.8118,
+    "per_class": {
+      "Credit Card": {
+        "precision": 0.7905,
+        "recall": 0.7663,
+        "f1": 0.7782,
+        "support": 719
+      },
+      "Credit Reporting": {
+        "precision": 0.8921,
+        "recall": 0.9228,
+        "f1": 0.9072,
+        "support": 4210
+      },
+      "Debt Collection": {
+        "precision": 0.7649,
+        "recall": 0.6941,
+        "f1": 0.7278,
+        "support": 1069
+      },
+      "Mortgages & Loans": {
+        "precision": 0.8274,
+        "recall": 0.8198,
+        "f1": 0.8236,
+        "support": 877
+      },
+      "Retail Banking": {
+        "precision": 0.8785,
+        "recall": 0.856,
+        "f1": 0.8671,
+        "support": 625
+      }
+    },
+    "confusion_matrix": [
+      [
+        551,
+        90,
+        16,
+        20,
+        42
+      ],
+      [
+        58,
+        3885,
+        182,
+        73,
+        12
+      ],
+      [
+        35,
+        243,
+        742,
+        42,
+        7
+      ],
+      [
+        20,
+        100,
+        25,
+        719,
+        13
+      ],
+      [
+        33,
+        37,
+        5,
+        15,
+        535
+      ]
+    ],
+    "classes": [
+      "Credit Card",
+      "Credit Reporting",
+      "Debt Collection",
+      "Mortgages & Loans",
+      "Retail Banking"
+    ],
+    "log_loss": 0.4192,
+    "brier_score": 0.2135,
+    "training_time_sec": 3.39
+  },
+  "improved_uncalibrated": {
+    "accuracy": 0.8445,
+    "macro_f1": 0.8186,
+    "weighted_f1": 0.8484,
+    "macro_precision": 0.7894,
+    "macro_recall": 0.8565,
+    "per_class": {
+      "Credit Card": {
+        "precision": 0.7026,
+        "recall": 0.8512,
+        "f1": 0.7698,
+        "support": 719
+      },
+      "Credit Reporting": {
+        "precision": 0.9555,
+        "recall": 0.8359,
+        "f1": 0.8917,
+        "support": 4210
+      },
+      "Debt Collection": {
+        "precision": 0.688,
+        "recall": 0.8045,
+        "f1": 0.7417,
+        "support": 1069
+      },
+      "Mortgages & Loans": {
+        "precision": 0.759,
+        "recall": 0.8871,
+        "f1": 0.8181,
+        "support": 877
+      },
+      "Retail Banking": {
+        "precision": 0.842,
+        "recall": 0.904,
+        "f1": 0.8719,
+        "support": 625
+      }
+    },
+    "confusion_matrix": [
+      [
+        612,
+        23,
+        19,
+        16,
+        49
+      ],
+      [
+        155,
+        3519,
+        334,
+        174,
+        28
+      ],
+      [
+        48,
+        101,
+        860,
+        45,
+        15
+      ],
+      [
+        24,
+        29,
+        32,
+        778,
+        14
+      ],
+      [
+        32,
+        11,
+        5,
+        12,
+        565
+      ]
+    ],
+    "classes": [
+      "Credit Card",
+      "Credit Reporting",
+      "Debt Collection",
+      "Mortgages & Loans",
+      "Retail Banking"
+    ],
+    "log_loss": 0.4676,
+    "brier_score": 0.2368,
+    "training_time_sec": 9.18
+  },
+  "improved_calibrated": {
+    "accuracy": 0.8593,
+    "macro_f1": 0.8215,
+    "weighted_f1": 0.8574,
+    "macro_precision": 0.8246,
+    "macro_recall": 0.8227,
+    "per_class": {
+      "Credit Card": {
+        "precision": 0.7648,
+        "recall": 0.7733,
+        "f1": 0.769,
+        "support": 719
+      },
+      "Credit Reporting": {
+        "precision": 0.8982,
+        "recall": 0.9183,
+        "f1": 0.9082,
+        "support": 4210
+      },
+      "Debt Collection": {
+        "precision": 0.8192,
+        "recall": 0.6614,
+        "f1": 0.7319,
+        "support": 1069
+      },
+      "Mortgages & Loans": {
+        "precision": 0.8137,
+        "recall": 0.8563,
+        "f1": 0.8344,
+        "support": 877
+      },
+      "Retail Banking": {
+        "precision": 0.8272,
+        "recall": 0.904,
+        "f1": 0.8639,
+        "support": 625
+      }
+    },
+    "confusion_matrix": [
+      [
+        556,
+        68,
+        8,
+        18,
+        69
+      ],
+      [
+        92,
+        3866,
+        134,
+        100,
+        18
+      ],
+      [
+        38,
+        267,
+        707,
+        43,
+        14
+      ],
+      [
+        17,
+        79,
+        13,
+        751,
+        17
+      ],
+      [
+        24,
+        24,
+        1,
+        11,
+        565
+      ]
+    ],
+    "classes": [
+      "Credit Card",
+      "Credit Reporting",
+      "Debt Collection",
+      "Mortgages & Loans",
+      "Retail Banking"
+    ],
+    "log_loss": 0.4128,
+    "brier_score": 0.2132,
+    "training_time_sec": 9.82
+  }
+}

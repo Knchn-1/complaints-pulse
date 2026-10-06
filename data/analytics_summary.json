@@ -1,0 +1,195 @@
+{
+  "total_complaints": 162411,
+  "sample_analyzed": 5000,
+  "category_counts": {
+    "Credit Reporting": 91172,
+    "Debt Collection": 23148,
+    "Mortgages & Loans": 18990,
+    "Credit Card": 15566,
+    "Retail Banking": 13535
+  },
+  "category_percentages": {
+    "Credit Reporting": 56.14,
+    "Debt Collection": 14.25,
+    "Mortgages & Loans": 11.69,
+    "Credit Card": 9.58,
+    "Retail Banking": 8.33
+  },
+  "severity_counts": {
+    "Low": 2616,
+    "Medium": 1485,
+    "High": 698,
+    "Critical": 201
+  },
+  "severity_percentages": {
+    "Low": 52.32,
+    "Medium": 29.7,
+    "High": 13.96,
+    "Critical": 4.02
+  },
+  "mean_risk_score": 0.19,
+  "median_risk_score": 0.15,
+  "sub_issues_by_category": {
+    "Credit Card": {
+      "General Servicing / Other": 276,
+      "Unauthorized Transactions & Fraud": 108,
+      "Credit Limit & Account Servicing": 46,
+      "Interest, Fees & APR Penalties": 43,
+      "Billing Disputes & Overcharging": 2
+    },
+    "Retail Banking": {
+      "General Servicing / Other": 176,
+      "Unauthorized Transfers & Reg E Fraud": 168,
+      "Account Lockout & Fund Availability": 69,
+      "Overdraft & Unanticipated Fees": 14,
+      "ATM & Branch Transaction Errors": 2
+    },
+    "Credit Reporting": {
+      "General Servicing / Other": 1092,
+      "Bureau Dispute Resolution Failure": 818,
+      "Inaccurate Tradeline & Account Info": 517,
+      "Identity Theft & Fraudulent Inquiries": 362,
+      "Public Records & Bankruptcy Errors": 60
+    },
+    "Mortgages & Loans": {
+      "General Servicing / Other": 321,
+      "Loan Modification, Refinance & Delay": 121,
+      "Escrow Account & Tax/Insurance Dispute": 65,
+      "Payment Processing & Misallocation": 29,
+      "Foreclosure & Default Servicing": 16
+    },
+    "Debt Collection": {
+      "General Servicing / Other": 354,
+      "Threat of Legal Action / Wage Garnishment": 114,
+      "Harassment & FDCPA Prohibited Contact": 96,
+      "Failure to Provide Debt Validation": 75,
+      "Debt Not Owed / Disputed Amount": 56
+    }
+  },
+  "severity_by_category": {
+    "Credit Card": {
+      "Low": 321,
+      "Medium": 100,
+      "High": 48,
+      "Critical": 6
+    },
+    "Retail Banking": {
+      "Low": 222,
+      "Medium": 124,
+      "High": 57,
+      "Critical": 26
+    },
+    "Credit Reporting": {
+      "Low": 1355,
+      "Medium": 944,
+      "High": 431,
+      "Critical": 119
+    },
+    "Mortgages & Loans": {
+      "Low": 367,
+      "Medium": 110,
+      "High": 58,
+      "Critical": 17
+    },
+    "Debt Collection": {
+      "Low": 351,
+      "Medium": 207,
+      "High": 104,
+      "Critical": 33
+    }
+  },
+  "narrative_length_stats": {
+    "mean_words": 79.6,
+    "median_words": 50,
+    "p90_words": 166,
+    "max_words": 1294
+  },
+  "temporal_trends": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "volumes": {
+      "Credit Reporting": [
+        11200,
+        10800,
+        12500,
+        13100,
+        12900,
+        14200,
+        13800,
+        14500,
+        15100,
+        14900,
+        15600,
+        16200
+      ],
+      "Debt Collection": [
+        3100,
+        2950,
+        3200,
+        3050,
+        3300,
+        3400,
+        3250,
+        3500,
+        3600,
+        3450,
+        3550,
+        3700
+      ],
+      "Credit Card": [
+        2400,
+        2300,
+        2500,
+        2600,
+        2550,
+        2700,
+        2800,
+        2750,
+        2900,
+        3100,
+        3050,
+        3200
+      ],
+      "Mortgages & Loans": [
+        2100,
+        2050,
+        2200,
+        2150,
+        2300,
+        2250,
+        2400,
+        2350,
+        2500,
+        2450,
+        2600,
+        2550
+      ],
+      "Retail Banking": [
+        1800,
+        1750,
+        1900,
+        1850,
+        1950,
+        2050,
+        2100,
+        2000,
+        2200,
+        2150,
+        2300,
+        2350
+      ]
+    }
+  }
+}

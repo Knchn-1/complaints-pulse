@@ -1,0 +1,356 @@
+{
+  "benchmark_metadata": {
+    "sample_size": 3000,
+    "random_state": 42,
+    "timestamp": "2026-10-05 19:08:36"
+  },
+  "configurations": {
+    "HDBSCAN_conservative": {
+      "config": {
+        "name": "HDBSCAN_conservative",
+        "method": "hdbscan",
+        "min_cluster_size": 50,
+        "min_samples": 10,
+        "n_clusters": null
+      },
+      "fit_time_sec": 1.73,
+      "quality_report": {
+        "n_samples": 3000,
+        "n_clusters": 2,
+        "noise_count": 1835,
+        "noise_rate": 0.6117,
+        "cluster_sizes": {
+          "0": 1115,
+          "1": 50
+        },
+        "min_cluster_size": 50,
+        "max_cluster_size": 1115,
+        "mean_cluster_size": 582.5,
+        "median_cluster_size": 582.5,
+        "silhouette": 0.2622,
+        "davies_bouldin": 1.5713,
+        "intra_cluster_coherence": 0.4795,
+        "term_distinctiveness": 0.9375,
+        "is_actionable": true,
+        "actionability_reasons": [
+          "Passes all quality checks: coherent clusters, controlled noise, distinct themes."
+        ]
+      },
+      "sample_topics": [
+        {
+          "cluster_id": 0,
+          "size": 1115,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "account",
+            "credit",
+            "payment",
+            "card",
+            "bank"
+          ],
+          "coherence": 0.5678
+        },
+        {
+          "cluster_id": 1,
+          "size": 50,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "inquiry",
+            "date",
+            "inquiry date",
+            "removal",
+            "removal date"
+          ],
+          "coherence": 0.8063
+        }
+      ]
+    },
+    "HDBSCAN_sensitive": {
+      "config": {
+        "name": "HDBSCAN_sensitive",
+        "method": "hdbscan",
+        "min_cluster_size": 25,
+        "min_samples": 5,
+        "n_clusters": null
+      },
+      "fit_time_sec": 2.04,
+      "quality_report": {
+        "n_samples": 3000,
+        "n_clusters": 2,
+        "noise_count": 39,
+        "noise_rate": 0.013,
+        "cluster_sizes": {
+          "0": 2933,
+          "1": 28
+        },
+        "min_cluster_size": 28,
+        "max_cluster_size": 2933,
+        "mean_cluster_size": 1480.5,
+        "median_cluster_size": 1480.5,
+        "silhouette": 0.1514,
+        "davies_bouldin": 1.0312,
+        "intra_cluster_coherence": 0.588,
+        "term_distinctiveness": 0.9375,
+        "is_actionable": false,
+        "actionability_reasons": [
+          "Largest cluster contains 97.8% of all data (undifferentiated megacluster)."
+        ]
+      },
+      "sample_topics": [
+        {
+          "cluster_id": 0,
+          "size": 2933,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "credit",
+            "account",
+            "report",
+            "information",
+            "payment"
+          ],
+          "coherence": 0.4574
+        },
+        {
+          "cluster_id": 1,
+          "size": 28,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "acct opened",
+            "opened balance",
+            "balance account",
+            "account acct",
+            "acct"
+          ],
+          "coherence": 0.9846
+        }
+      ]
+    },
+    "MiniBatchKMeans_K8": {
+      "config": {
+        "name": "MiniBatchKMeans_K8",
+        "method": "kmeans",
+        "min_cluster_size": 10,
+        "min_samples": 5,
+        "n_clusters": 8
+      },
+      "fit_time_sec": 2.94,
+      "quality_report": {
+        "n_samples": 3000,
+        "n_clusters": 8,
+        "noise_count": 0,
+        "noise_rate": 0.0,
+        "cluster_sizes": {
+          "0": 230,
+          "1": 299,
+          "2": 529,
+          "3": 315,
+          "4": 385,
+          "5": 492,
+          "6": 416,
+          "7": 334
+        },
+        "min_cluster_size": 230,
+        "max_cluster_size": 529,
+        "mean_cluster_size": 375.0,
+        "median_cluster_size": 359.5,
+        "silhouette": 0.1249,
+        "davies_bouldin": 3.2977,
+        "intra_cluster_coherence": 0.3615,
+        "term_distinctiveness": 0.625,
+        "is_actionable": true,
+        "actionability_reasons": [
+          "Passes all quality checks: coherent clusters, controlled noise, distinct themes."
+        ]
+      },
+      "sample_topics": [
+        {
+          "cluster_id": 0,
+          "size": 230,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "inquiry",
+            "credit",
+            "report",
+            "date",
+            "account"
+          ],
+          "coherence": 0.5127
+        },
+        {
+          "cluster_id": 1,
+          "size": 299,
+          "category": "Credit Card",
+          "top_terms": [
+            "card",
+            "credit",
+            "credit card",
+            "charge",
+            "account"
+          ],
+          "coherence": 0.7148
+        },
+        {
+          "cluster_id": 2,
+          "size": 529,
+          "category": "Mortgages & Loans",
+          "top_terms": [
+            "payment",
+            "loan",
+            "mortgage",
+            "time",
+            "month"
+          ],
+          "coherence": 0.6907
+        }
+      ]
+    },
+    "MiniBatchKMeans_K15": {
+      "config": {
+        "name": "MiniBatchKMeans_K15",
+        "method": "kmeans",
+        "min_cluster_size": 10,
+        "min_samples": 5,
+        "n_clusters": 15
+      },
+      "fit_time_sec": 1.45,
+      "quality_report": {
+        "n_samples": 3000,
+        "n_clusters": 15,
+        "noise_count": 0,
+        "noise_rate": 0.0,
+        "cluster_sizes": {
+          "0": 259,
+          "1": 175,
+          "2": 105,
+          "3": 365,
+          "4": 169,
+          "5": 103,
+          "6": 243,
+          "7": 259,
+          "8": 188,
+          "9": 135,
+          "10": 171,
+          "11": 113,
+          "12": 202,
+          "13": 266,
+          "14": 247
+        },
+        "min_cluster_size": 103,
+        "max_cluster_size": 365,
+        "mean_cluster_size": 200.0,
+        "median_cluster_size": 188.0,
+        "silhouette": 0.1471,
+        "davies_bouldin": 2.785,
+        "intra_cluster_coherence": 0.4407,
+        "term_distinctiveness": 0.65,
+        "is_actionable": true,
+        "actionability_reasons": [
+          "Passes all quality checks: coherent clusters, controlled noise, distinct themes."
+        ]
+      },
+      "sample_topics": [
+        {
+          "cluster_id": 0,
+          "size": 259,
+          "category": "Credit Card",
+          "top_terms": [
+            "card",
+            "account",
+            "told",
+            "service",
+            "customer"
+          ],
+          "coherence": 0.7549
+        },
+        {
+          "cluster_id": 1,
+          "size": 175,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "letter",
+            "sent",
+            "response",
+            "dispute",
+            "credit"
+          ],
+          "coherence": 0.6592
+        },
+        {
+          "cluster_id": 2,
+          "size": 105,
+          "category": "Credit Reporting",
+          "top_terms": [
+            "day",
+            "letter",
+            "report day",
+            "information",
+            "credit"
+          ],
+          "coherence": 0.5491
+        }
+      ]
+    }
+  },
+  "recommended_configuration": "MiniBatchKMeans_K15",
+  "selection_rationale": "MiniBatchKMeans_K15 selected for guaranteed 100% complaint assignment, robust cluster sizing, and high c-TF-IDF term distinctiveness without discarding marginal complaints.",
+  "sample_emerging_alerts": [
+    {
+      "cluster_id": 11,
+      "theme_name": "Account / Fraud / Open",
+      "dominant_category": "Credit Reporting",
+      "recent_volume": 69,
+      "baseline_volume": 46,
+      "growth_rate": 0.5,
+      "growth_percentage": 50.0,
+      "coherence": 0.591,
+      "avg_severity_score": 0.2254,
+      "severity_level": "Low",
+      "top_keywords": [
+        "account",
+        "fraud",
+        "open",
+        "report",
+        "credit",
+        "filed",
+        "open account",
+        "police report"
+      ],
+      "representative_complaints": [
+        "disputing account credit report account result fraud action behalf police report filed attached complaint",
+        "contacted complaint complaint letting know account listed report fraud explained trans union representative several time continue report fraud account stuff fraud responded applaud recent effort take charge credit want know side help support path toward credit health recently received request contained information didnt appear communicated properly authorized third party submitted complaint reason never anything get issue resolved today still reporting account asking please delete account credit report",
+        "filing report today applied loan denied account company called reflecting badly credit report know account credit report mine never oped account allow anyone open name know account belongs never gained anything opened name money good service benefit ever make payment towards account also affiliated way never signed contract agreement company allow run access credit file already filed police report well complaint cfpb regarding incorrect account information"
+      ],
+      "urgency": "High",
+      "detected_at": "2026-10-05T13:38:36.446425+00:00"
+    },
+    {
+      "cluster_id": 13,
+      "theme_name": "Report / Credit Report / Credit",
+      "dominant_category": "Credit Reporting",
+      "recent_volume": 143,
+      "baseline_volume": 106,
+      "growth_rate": 0.3491,
+      "growth_percentage": 34.9,
+      "coherence": 0.5774,
+      "avg_severity_score": 0.1245,
+      "severity_level": "Low",
+      "top_keywords": [
+        "report",
+        "credit report",
+        "credit",
+        "account",
+        "reporting",
+        "removed",
+        "remove",
+        "information"
+      ],
+      "representative_complaints": [
+        "issue missing information credit report account xxxxxxxx oh account showing credit report",
+        "reporting medical bill twice credit report making appear extra derogatory remark credit report",
+        "show account correspond master promissory note time school continues report credit report"
+      ],
+      "urgency": "Moderate",
+      "detected_at": "2026-10-05T13:38:36.474168+00:00"
+    }
+  ]
+}
