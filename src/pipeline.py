@@ -319,7 +319,7 @@ class ComplaintsPulsePipeline:
             sub_issue_description=sub_res.description,
             severity_level=sev_res.severity_level,
             risk_score=sev_res.risk_score,
-            severity_signals=sev_res.matched_signals,
+            severity_signals={s.group_name: {"weight": s.weight, "matched_keywords": s.matched_keywords} for s in sev_res.signal_breakdown if s.is_triggered},
             detected_keywords=sev_res.detected_keywords,
             is_critical=sev_res.is_critical,
             priority=triage_dec.priority_level,
